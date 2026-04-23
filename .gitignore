@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Logs and caches
+logs/
+*.log
+npm-debug.log*
+.cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.suo
+
+# Uploads / local data (if added later)
+uploads/

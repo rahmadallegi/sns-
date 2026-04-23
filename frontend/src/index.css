@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 3% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 3% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 3% 15%;
+
+    --primary: 126 90% 19%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 3% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 126 90% 19%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 126 90% 19%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 3% 15%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 126 90% 19%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 25%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 126 90% 19%;
+
+    --footer-bg: 0 3% 15%;
+    --footer-fg: 0 0% 95%;
+
+    --card-shadow: 0 2px 12px -2px hsl(0 0% 0% / 0.06);
+    --card-shadow-hover: 0 8px 24px -6px hsl(0 0% 0% / 0.12);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+  }
+
+  .dark {
+    --background: 0 0% 98%;
+    --foreground: 0 4% 16%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 126 90% 19%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 126 90% 25%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 126 90% 25%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 126 90% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 126 90% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 px-6 md:py-20 md:px-8;
+  }
+
+  .footer-section {
+    background-color: hsl(var(--footer-bg));
+    color: hsl(var(--footer-fg));
+  }
+}
